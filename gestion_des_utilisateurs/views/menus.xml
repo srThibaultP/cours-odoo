@@ -3,8 +3,12 @@
     <!-- Top menu item -->
     <menuitem name="Gestion des utilisateurs" id="gestionDesUtilisateurs_root" sequence="20" />
     <!-- menu categories -->
-    <menuitem id="gestionDesUtilisateurs_classe_root" name="Classe" parent="gestionDesUtilisateurs_root" sequence="1" />
+    <menuitem id="gestionDesUtilisateurs_alternants_root" name="Alternants" parent="gestionDesUtilisateurs_root" sequence="1" />
     <!-- actions -->
-    <menuitem id="Liste_des_classes" name="Liste des classes" action="gestion_des_utilisateurs.action_window" parent="gestionDesUtilisateurs_root" sequence="1" />
-    <menuitem id="Affichage_kanban" name="Kanban" action="gestion_des_utilisateurs.action_window" parent="gestionDesUtilisateurs_root" sequence="2" />
+    <menuitem id="Liste_des_classes" name="Liste des classes" action="gestion_des_utilisateurs_action_window" parent="gestionDesUtilisateurs_alternants_root" sequence="1" />
+    <menuitem id="Liste_des_alternants" name="Liste des alternants" action="gestion_des_utilisateurs_alternants_action_window" parent="gestionDesUtilisateurs_alternants_root" sequence="2" />
+    <menuitem id="Liste_des_entreprises" name="Liste des entreprises" action="gestion_des_utilisateurs_entreprise_action_window" parent="gestionDesUtilisateurs_alternants_root" sequence="3" />
+    <menuitem id="Liste_des_tuteurs_universitaires" name="Liste des tuteurs universitaires" action="gestion_des_utilisateurs_tuteursuniv_action_window" parent="gestionDesUtilisateurs_alternants_root" sequence="4" />
+    <menuitem id="Liste_des_tuteurs_entreprise" name="Liste des tuteurs entreprise" action="gestion_des_utilisateurs_tuteursentreprise_action_window" parent="gestionDesUtilisateurs_alternants_root" sequence="5" />
+    <!--<menuitem id="Affichage_kanban" name="Kanban" action="gestion_des_utilisateurs.action_window" parent="gestionDesUtilisateurs_root" sequence="2" />-->
 </odoo>

@@ -19,15 +19,92 @@
       </field>
     </record>
 
+    <record model="ir.ui.view" id="gestion_des_utilisateurs_list_alternants">
+      <field name="name">Liste des alternants</field>
+      <field name="model">gestion_des_utilisateurs.alternants</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name" />
+          <field name="prenom" />
+          <field name="email" />
+          <field name="classe_id" />
+          <field name="entreprise_id" />
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="gestion_des_utilisateurs_list_alternants">
+      <field name="name">Liste des entreprise</field>
+      <field name="model">gestion_des_utilisateurs.entreprise</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name" />
+          <field name="adresse" />
+          <field name="alternant_ids" />
+          <field name="tuteur_ids" />
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="gestion_des_utilisateurs_list_alternants">
+      <field name="name">Liste des tuteurs universitaires</field>
+      <field name="model">gestion_des_utilisateurs.tuteursuniv</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name" />
+          <field name="prenom" />
+          <field name="email" />
+          <field name="alternant_ids" />
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="gestion_des_utilisateurs_list_alternants">
+      <field name="name">Liste des tuteurs entreprise</field>
+      <field name="model">gestion_des_utilisateurs.tuteursentreprise</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name" />
+          <field name="prenom" />
+          <field name="email" />
+          <field name="alternant_ids" />
+          <field name="entreprise_ids"/>
+        </tree>
+      </field>
+    </record>
+
 
     <!-- actions opening views on models -->
 
-    <record model="ir.actions.act_window" id="gestion_des_utilisateurs.action_window">
-      <field name="name">Liste des alternants</field>
+    <record model="ir.actions.act_window" id="gestion_des_utilisateurs_action_window">
+      <field name="name">Liste des classes</field>
       <field name="res_model">gestion_des_utilisateurs.classe</field>
       <field name="view_mode">tree,form,kanban</field>
     </record>
 
+    <record model="ir.actions.act_window" id="gestion_des_utilisateurs_alternants_action_window">
+      <field name="name">Liste des alternants</field>
+      <field name="res_model">gestion_des_utilisateurs.alternants</field>
+      <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="gestion_des_utilisateurs_entreprise_action_window">
+      <field name="name">Liste des entreprises</field>
+      <field name="res_model">gestion_des_utilisateurs.entreprise</field>
+      <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="gestion_des_utilisateurs_tuteursuniv_action_window">
+      <field name="name">Liste des tuteurs universitaires</field>
+      <field name="res_model">gestion_des_utilisateurs.tuteursuniv</field>
+      <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="gestion_des_utilisateurs_tuteursentreprise_action_window">
+      <field name="name">Liste des tuteurs entreprise</field>
+      <field name="res_model">gestion_des_utilisateurs.tuteursentreprise</field>
+      <field name="view_mode">tree,form,kanban</field>
+    </record>
 
     <!-- server action to the one above -->
 <!--

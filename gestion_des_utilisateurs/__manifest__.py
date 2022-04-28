@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Gestion Des utilisateurs",
+    'name': "Gestion des utilisateurs",
 
     'summary': """
         Projet Gestion des Utilisateurs""",

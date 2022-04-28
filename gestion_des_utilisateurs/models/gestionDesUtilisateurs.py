@@ -45,16 +45,26 @@ class entreprise(models.Model):
 
     name = fields.Char(string="Entreprise", required=True)
     adresse = fields.Char(string="Adresse")
-    alternant_ids = fields.One2many('gestion_des_utilisateurs.alternants', 'entreprise_id', string='Alternant')
-    tuteur_ids = fields.One2many('gestion_des_utilisateurs.tuteurs', 'entreprise_id', string='Tuteur')
+    alternant_ids = fields.Many2one('gestion_des_utilisateurs.alternants', string='Alternant')
+    tuteur_ids = fields.Many2one(
+        'gestion_des_utilisateurs.tuteurs', string='Tuteur')
 
-
-class tuteurs(models.Model):
-    _name = 'gestion_des_utilisateurs.tuteurs'
-    _description = 'gestion_des_utilisateurs.tuteurs'
+class tuteursuniv(models.Model):
+    _name = 'gestion_des_utilisateurs.tuteursuniv'
+    _description = 'gestion_des_utilisateurs.tuteursuniv'
 
     name = fields.Char(string="Nom", required=True)
     prenom = fields.Char(string="Prénom", required=True)
     email = fields.Char(string="Email", required=True)
-    entreprise_id = fields.Many2one(
-        'gestion_des_utilisateurs.entreprise', string='Entreprise')
+    alternant_ids = fields.Many2one('gestion_des_utilisateurs.alternants', string='Alternant')
+
+
+class tuteursentreprise(models.Model):
+    _name = 'gestion_des_utilisateurs.tuteursentreprise'
+    _description = 'gestion_des_utilisateurs.tuteursentreprise'
+
+    name = fields.Char(string="Nom", required=True)
+    prenom = fields.Char(string="Prénom", required=True)
+    email = fields.Char(string="Email", required=True)
+    alternant_ids = fields.Many2one('gestion_des_utilisateurs.alternants', string='Alternant')
+    entreprise_ids = fields.Many2one('gestion_des_utilisateurs.entreprise', string='Entreprise')

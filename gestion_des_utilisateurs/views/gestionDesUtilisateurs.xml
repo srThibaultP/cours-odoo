@@ -7,7 +7,7 @@
     </record>
     <!-- explicit list view definition -->
 
-    <record model="ir.ui.view" id="gestion_des_utilisateurs.list">
+    <record model="ir.ui.view" id="gestion_des_utilisateurs_list">
       <field name="name">gestionDesUtilisateurs list</field>
       <field name="model">gestion_des_utilisateurs.classe</field>
       <field name="arch" type="xml">

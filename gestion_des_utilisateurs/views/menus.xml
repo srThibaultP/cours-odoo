@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <!-- Top menu item -->
-    <menuitem name="Classe" id="Inventaire_menu_root" sequence="20" />
+    <menuitem name="Gestion des utilisateurs" id="gestionDesUtilisateurs_root" sequence="20" />
     <!-- menu categories -->
-    <menuitem id="Inventaire_menu_gestion" name="Classe" parent="Inventaire_menu_root" sequence="1" />
+    <menuitem id="gestionDesUtilisateurs_classe_root" name="Classe" parent="gestionDesUtilisateurs_root" sequence="1" />
     <!-- actions -->
-    <menuitem id="Inventaire_menu_materiel" name="Inventaire materiel" action="gestion_des_utilisateurs.action_window" parent="Inventaire_menu_gestion" sequence="1" />
+    <menuitem id="Inventaire_menu_materiel" name="Inventaire materiel iutna" action="gestion_des_utilisateurs.action_window" parent="gestionDesUtilisateurs_root" sequence="1" />
 </odoo>

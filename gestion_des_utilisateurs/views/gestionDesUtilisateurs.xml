@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="0">
+  <data>
+    <record id="group_inventaire_user" model="res.groups">
+      <field name="name">Gestion des utilisateurs</field>
+      <field name="category_id" ref="base.module_category_hidden" />
+    </record>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="gestion_des_utilisateurs.list">
+      <field name="name">gestionDesUtilisateurs list</field>
+      <field name="model">gestion_des_utilisateurs.classe</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="alternant_ids"/>
+          <field name="description"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="gestion_des_utilisateurs.action_window">
+      <field name="name">gestionDesUtilisateurs window</field>
+      <field name="res_model">gestion_des_utilisateurs.classe</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="gestion_des_utilisateurs.action_server">
+      <field name="name">gestionDesUtilisateurs server</field>
+      <field name="model_id" ref="model_gestion_des_utilisateurs_gestion_des_utilisateurs"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="gestionDesUtilisateurs" id="gestion_des_utilisateurs.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="gestion_des_utilisateurs.menu_1" parent="gestion_des_utilisateurs.menu_root"/>
+    <menuitem name="Menu 2" id="gestion_des_utilisateurs.menu_2" parent="gestion_des_utilisateurs.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="gestion_des_utilisateurs.menu_1_list" parent="gestion_des_utilisateurs.menu_1"
+              action="gestion_des_utilisateurs.action_window"/>
+    <menuitem name="Server to list" id="gestion_des_utilisateurs" parent="gestion_des_utilisateurs.menu_2"
+              action="gestion_des_utilisateurs.action_server"/>
+-->
+  </data>
+</odoo>

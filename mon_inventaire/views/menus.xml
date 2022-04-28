@@ -1,64 +1,12 @@
-<odoo> 
- <!-- explicit list view definition -->
-<data>
-    <record model="ir.ui.view" id="inventaire_list_marque">
-      <field name="name">monInventaire list</field>
-      <field name="model">inventaire.marque</field>
-      <field name="arch" type="xml">
-        <tree>
-          <field name="name"/>
-          <field name="description"/>
-        </tree>
-      </field>
-    </record>
-    <!-- actions opening views on models -->
-
-    <record model="ir.actions.act_window" id="inventaire_marque_action_window">
-      <field name="name">monInventaire window</field>
-      <field name="res_model">inventaire.marque</field>
-      <field name="view_mode">tree,form</field>
-    </record>
-
-
-    <!-- server action to the one above -->
-
- <!--   <record model="ir.actions.server" id="inventaire.action_server">
-      <field name="name">monInventaire server</field>
-      <field name="model_id" ref="model_inventaire_inventaire"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": model._name,
-        }
-      </field>
-    </record>-->
-
-    <!-- Top menu item -->
-
-    <!--<menuitem name="monInventaire" id="inventaire.menu_root"/>-->
-    <!-- Top menu item -->
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!-- Top menu item -->
 <menuitem name="Inventaire" id="Inventaire_menu_root" sequence="20"/>
 <!-- menu categories -->
 <menuitem id="Inventaire_menu_gestion" name="Gestion inventaire" parent="Inventaire_menu_root" sequence="1"/>
 <!-- actions -->
-<menuitem id="Inventaire_menu_materiel" name="Inventaire materiel" action="inventaire_materiel_action_window"
+<menuitem id="Inventaire_menu_materiel" name="Inventaire matériel" action="inventaire_materiel_action_window"
 parent="Inventaire_menu_gestion" sequence="1"/>
 <menuitem id="Inventaire_menu_marque" name="Inventaire marque" action="inventaire_marque_action_window"
 parent="Inventaire_menu_gestion" sequence="2"/>
-    
-
-    <!-- menu categories -->
-
-<!--    <menuitem name="Menu 1" id="inventaire.menu_1" parent="inventaire.menu_root"/>
-    <menuitem name="Menu 2" id="inventaire.menu_2" parent="inventaire.menu_root"/>-->
-
-    <!-- actions -->
-
-    <!--<menuitem name="List" id="inventaire.menu_1_list" parent="inventaire.menu_1"
-              action="inventaire.action_window"/>-->
-    <!--<menuitem name="Server to list" id="inventaire" parent="inventaire.menu_2"
-              action="inventaire.action_server"/>-->
-    </data>
 </odoo>

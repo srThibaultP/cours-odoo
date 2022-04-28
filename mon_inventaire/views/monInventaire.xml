@@ -3,27 +3,27 @@
 <odoo noupdate="0">
   <data>
     <record id="group_inventaire_user" model="res.groups">
-<field name="name">Droit inventaire</field>
-<field name="category_id" ref="base.module_category_hidden"/>
-</record>
+      <field name="name">Droit inventaire</field>
+      <field name="category_id" ref="base.module_category_hidden" />
+    </record>
 
-<record model="ir.ui.view" id="inventaire_list_materiel">
-<field name="name">inventaire list</field>
-<field name="model">inventaire.materiel</field>
-<field name="arch" type="xml">
-<tree>
-<field name="name"/>
-<field name="type"/>
-<field name="marque_id"/>
-</tree>
-</field>
-</record>
+    <record model="ir.ui.view" id="inventaire_list_materiel">
+      <field name="name">inventaire list</field>
+      <field name="model">inventaire.materiel</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name" />
+          <field name="type" />
+          <field name="marque_id" />
+        </tree>
+      </field>
+    </record>
 
-<!-- actions opening views on models -->
-<record model="ir.actions.act_window" id="inventaire_materiel_action_window">
-<field name="name">inventaire window</field>
-<field name="res_model">inventaire.materiel</field>
-<field name="view_mode">tree,form</field>
-</record>
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="inventaire_materiel_action_window">
+      <field name="name">inventaire window</field>
+      <field name="res_model">inventaire.materiel</field>
+      <field name="view_mode">tree,form</field>
+    </record>
   </data>
 </odoo>

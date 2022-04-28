@@ -1,17 +1,16 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "monInventaire",
+    'name': "Mon inventaire",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        Exercice d'une application de gestion d'inventaire""",
 
     'description': """
-        Long description of module's purpose
+        Exercice d'une application de gestion d'inventaire
     """,
 
-    'author': "My Company",
-    'website': "http://www.yourcompany.com",
+    'author': "Thibault Pech",
+    'website': "http://www.github.com/srthibaultp",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/14.0/odoo/addons/base/data/ir_module_category_data.xml

@@ -2,7 +2,7 @@
 <odoo noupdate="0">
   <data>
     <record id="group_utilisateurs_user" model="res.groups">
-      <field name="name">Gestion des utilisateurs</field>
+      <field name="name">Gestion des users</field>
       <field name="category_id" ref="base.module_category_hidden" />
     </record>
     <!-- explicit list view definition -->
@@ -25,7 +25,7 @@
     <record model="ir.actions.act_window" id="gestion_des_utilisateurs.action_window">
       <field name="name">Liste des alternants</field>
       <field name="res_model">gestion_des_utilisateurs.classe</field>
-      <field name="view_mode">tree,form</field>
+      <field name="view_mode">tree,form,kanban</field>
     </record>
 
 

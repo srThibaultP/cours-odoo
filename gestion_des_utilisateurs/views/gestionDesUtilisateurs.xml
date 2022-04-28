@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo noupdate="0">
   <data>
-    <record id="group_inventaire_user" model="res.groups">
+    <record id="group_utilisateurs_user" model="res.groups">
       <field name="name">Gestion des utilisateurs</field>
       <field name="category_id" ref="base.module_category_hidden" />
     </record>
     <!-- explicit list view definition -->
 
     <record model="ir.ui.view" id="gestion_des_utilisateurs_list">
-      <field name="name">gestionDesUtilisateurs list</field>
+      <field name="name">Liste des classes</field>
       <field name="model">gestion_des_utilisateurs.classe</field>
       <field name="arch" type="xml">
         <tree>
@@ -23,7 +23,7 @@
     <!-- actions opening views on models -->
 
     <record model="ir.actions.act_window" id="gestion_des_utilisateurs.action_window">
-      <field name="name">gestionDesUtilisateurs window</field>
+      <field name="name">Liste des alternants</field>
       <field name="res_model">gestion_des_utilisateurs.classe</field>
       <field name="view_mode">tree,form</field>
     </record>

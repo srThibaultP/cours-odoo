@@ -27,6 +27,7 @@
         'views/gestionDesUtilisateurs.xml',
         'views/templates.xml',
         'views/menus.xml',
+        'views/kanban.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

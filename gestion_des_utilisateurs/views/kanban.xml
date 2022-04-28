@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<record id="gestiondesutilisateurs_view_kanban" model="ir.ui.view">
+    <field name="name">gestion_des_utilisateurs.view.kanban</field>
+    <field name="model">gestion_des_utilisateurs.classe</field>
+    <field name="arch" type="xml">
+        <kanban>
+            <templates>
+                <t t-name="kanban-box">
+                    
+                </t>
+            </templates>
+        </kanban>
+    </field>
+</record>
+</odoo>

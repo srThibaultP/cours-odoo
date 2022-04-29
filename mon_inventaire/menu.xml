@@ -37,6 +37,12 @@
 	      <field name="res_model">mon_inventaire.marque</field>
 	      <field name="view_mode">tree,form</field>
 	    </record>
+
+	<record model="ir.actions.act_window" id="mon_inventaire.action_window">
+		<field name="name">inventaire window</field>
+		<field name="res_model">mon_inventaire.responsable</field>
+		<field name="view_mode">tree,form,kanban</field>
+	</record>
 	
 	    <!-- server action to the one above -->
 	
@@ -71,5 +77,8 @@
 		<menuitem id="Inventaire_menu_marque" name="Inventaire marque" action="inventaire_marque_action_window"
 		
 		parent="Inventaire_menu_gestion" sequence="2"/>
-	
+		
+		<menuitem id="Inventaire_menu_responsable" name="Liste des responsables" action="inventaire_responsable_action_window"
+
+		parent="Inventaire_menu_gestion" sequence="3"/>
 </odoo>

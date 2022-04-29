@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
 
-from . import monInventaire
+from . import mon_inventaire

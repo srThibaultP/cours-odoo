@@ -108,8 +108,9 @@
               <div t-attf-class="oe_kanban_global_click">
                 <div class="row">
                   <div class="col-6">
-                    <field name="name" />
                     <field name="marque_id" />
+                    <br />
+                    <field name="name" />
                   </div>
                   <div class="col-6 text-right">
                     <field name="responsable_id_full_name" />
